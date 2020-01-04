@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import history from './History';
-import axios from 'axios';
 import TaskDescription from './utils/TaskDescription/TaskDescription';
 import Header from './utils/Header/Header';
+import Post from './utils/Home/Post';
 require('@babel/polyfill');
 
 class App extends Component {
@@ -20,7 +19,12 @@ class App extends Component {
       {
         path: '/',
         name: 'Task Description',
-        Component: TaskDescription,
+        component: TaskDescription,
+      },
+      {
+        path: '/post',
+        name: 'Post',
+        component: Post,
       },
     ];
   }
@@ -30,14 +34,12 @@ class App extends Component {
 
     return (
       <>
-        <Router history={history}>
+        <Router>
           <Header activePath={activePath} routes={this.routes} />
           <Switch>
-            {this.routes.map(({ path, name, Component }) => {
+            {this.routes.map(({ path, name, component }) => {
               return (
-                <Route key={path} path={path}>
-                  <Component />
-                </Route>
+                <Route exact key={path} path={path} component={component} />
               );
             })}
           </Switch>
