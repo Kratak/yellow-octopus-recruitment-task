@@ -74626,15 +74626,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _History__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./History */ "./resources/js/components/History.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _utils_TaskDescription_TaskDescription__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/TaskDescription/TaskDescription */ "./resources/js/components/utils/TaskDescription/TaskDescription.js");
-/* harmony import */ var _utils_Header_Header__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/Header/Header */ "./resources/js/components/utils/Header/Header.js");
-
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _History__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./History */ "./resources/js/components/History.js");
+/* harmony import */ var _utils_TaskDescription_TaskDescription__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/TaskDescription/TaskDescription */ "./resources/js/components/utils/TaskDescription/TaskDescription.js");
+/* harmony import */ var _utils_Header_Header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utils/Header/Header */ "./resources/js/components/utils/Header/Header.js");
+/* harmony import */ var _utils_Home_Post__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/Home/Post */ "./resources/js/components/utils/Home/Post.js");
 
 
 
@@ -74663,11 +74659,15 @@ function (_Component) {
     _this.state = {
       activePath: '/'
     };
-    _this.history = _History__WEBPACK_IMPORTED_MODULE_10__["default"];
+    _this.history = _History__WEBPACK_IMPORTED_MODULE_9__["default"];
     _this.routes = [{
       path: '/',
       name: 'Task Description',
-      Component: _utils_TaskDescription_TaskDescription__WEBPACK_IMPORTED_MODULE_12__["default"]
+      component: _utils_TaskDescription_TaskDescription__WEBPACK_IMPORTED_MODULE_10__["default"]
+    }, {
+      path: '/post',
+      name: 'Post',
+      component: _utils_Home_Post__WEBPACK_IMPORTED_MODULE_12__["default"]
     }];
     return _this;
   }
@@ -74676,19 +74676,19 @@ function (_Component) {
     key: "render",
     value: function render() {
       var activePath = this.state.activePath;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Router"], {
-        history: _History__WEBPACK_IMPORTED_MODULE_10__["default"]
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_utils_Header_Header__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_utils_Header_Header__WEBPACK_IMPORTED_MODULE_11__["default"], {
         activePath: activePath,
         routes: this.routes
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Switch"], null, this.routes.map(function (_ref) {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Switch"], null, this.routes.map(function (_ref) {
         var path = _ref.path,
             name = _ref.name,
-            Component = _ref.Component;
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Route"], {
+            component = _ref.component;
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+          exact: true,
           key: path,
-          path: path
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Component, null));
+          path: path,
+          component: component
+        });
       }))));
     }
   }]);
@@ -74730,7 +74730,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
@@ -74741,7 +74743,7 @@ var Header = function Header(_ref) {
       routes = _ref.routes;
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("nav", {
     className: "navbar navbar-expand-lg navbar-dark bg-dark"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
     to: "/",
     className: "navbar-brand"
   }, "Task"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
@@ -74762,15 +74764,113 @@ var Header = function Header(_ref) {
   }, routes && routes.map(function (route, i) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       key: "header-url-".concat(i),
-      className: route.path === activePath ? "nav-item active" : "nav-item"
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      className: route.path === activePath ? 'nav-item active' : 'nav-item'
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
       to: route.path,
       className: "nav-link"
     }, route.name));
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Header);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Header));
+
+/***/ }),
+
+/***/ "./resources/js/components/utils/Home/Post.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/utils/Home/Post.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _domain_provider_mock_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../domain/provider/mock/index */ "./resources/js/domain/provider/mock/index.js");
+
+
+
+
+
+
+
+
+
+
+var Home =
+/*#__PURE__*/
+function (_Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Home, _Component);
+
+  function Home() {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Home);
+
+    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Home).call(this));
+    _this.state = {
+      posts: []
+    };
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      _domain_provider_mock_index__WEBPACK_IMPORTED_MODULE_8__["default"].getAllPosts().then(function (data) {
+        return _this2.setState({
+          posts: data
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("main", {
+        role: "main"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("section", {
+        className: "jumbotron text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", {
+        className: "display-4",
+        style: {
+          textAlign: 'left'
+        }
+      }, "Posts list"), this.state.posts.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "card"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "card-header"
+        }, post.title), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+          className: "list-group list-group-flush"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+          className: "list-group-item"
+        }, post.body)));
+      }))));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_7__["withRouter"])(Home));
 
 /***/ }),
 
@@ -74785,8 +74885,10 @@ var Header = function Header(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../assets/img/screen.png */ "./resources/js/assets/img/screen.png");
-/* harmony import */ var _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_img_screen_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../assets/img/screen.png */ "./resources/js/assets/img/screen.png");
+/* harmony import */ var _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_img_screen_png__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -74802,11 +74904,169 @@ var TaskDescription = function TaskDescription() {
   }, "Opis zadania"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "lead text-muted"
   }, "Obecny projekt zosta\u0142 stworzony w frameworku Laravel jako backend i bibliotece React.js jako frontend, rozbuduj go o podstron\u0119 '/posts' wed\u0142ug poni\u017Cszych instrukcji:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "1. Stworz Controller w Laravelu kt\xF3ry pobierze GET list\u0119 post\xF3w znajduj\u0105c\u0105 si\u0119 pod adresem https://jsonplaceholder.typicode.com/posts. Mo\u017Cesz to zrobi\u0107 w dowolny spos\xF3b(masz do dyspozycji Guzzle - PHP HTTP client)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "2. W pliku ~/routes/web.php stw\xF3rz Endpoint, pod adresem kt\xF3rego dostajesz zwr\xF3cone dane"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "3. w ~/resources/utils/ stw\xF3rz komponent React, w kt\xF3rym pobierzesz dane znajduj\u0105ce si\u0119 pod adresem z punktu 2 i wy\u015Bwietl list\u0119 post\xF3w pod adresem /posts, stw\xF3rz element w menu kieruj\u0105cy na /posts. Mo\u017Cesz to zrobi\u0107 w dowolny spos\xF3b(masz do dyspozycji bibliotek\u0119 axios)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "4. Przy przekierowaniu w menu na /posts, zadbaj \u017Ceby ten element menu by\u0142 aktywny"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5. Twoja podstrona posts powinna wygl\u0105da\u0107 podobnie do poni\u017Cszego zrzutu ekranu. Wykorzystano elementy '.card' z Bootstrap 4."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_1___default.a
+    src: _assets_img_screen_png__WEBPACK_IMPORTED_MODULE_2___default.a
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "6. Mo\u017Cesz u\u017Cywa\u0107 w projekcie sk\u0142adni ES6(Arrow functions, Destructuring etc.), React Hooks etc."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Powodzenia!"))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (TaskDescription);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(TaskDescription));
+
+/***/ }),
+
+/***/ "./resources/js/domain/apiConstans.js":
+/*!********************************************!*\
+  !*** ./resources/js/domain/apiConstans.js ***!
+  \********************************************/
+/*! exports provided: urls */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "urls", function() { return urls; });
+var urls = {
+  baseURL: 'https://jsonplaceholder.typicode.com/',
+  post: 'posts/'
+};
+
+
+/***/ }),
+
+/***/ "./resources/js/domain/provider/DataProvider.js":
+/*!******************************************************!*\
+  !*** ./resources/js/domain/provider/DataProvider.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _DataProviderInstance__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataProviderInstance */ "./resources/js/domain/provider/DataProviderInstance.js");
+/* harmony import */ var _apiConstans__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../apiConstans */ "./resources/js/domain/apiConstans.js");
+
+
+
+
+var DataProvider = function DataProvider() {
+  _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, DataProvider);
+
+  this.axios = _DataProviderInstance__WEBPACK_IMPORTED_MODULE_1__["default"].createAxiosInstance(_apiConstans__WEBPACK_IMPORTED_MODULE_2__["urls"].baseURL);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DataProvider);
+
+/***/ }),
+
+/***/ "./resources/js/domain/provider/DataProviderInstance.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/domain/provider/DataProviderInstance.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var DataProviderInstance =
+/*#__PURE__*/
+function () {
+  function DataProviderInstance() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, DataProviderInstance);
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(DataProviderInstance, null, [{
+    key: "createAxiosInstance",
+    value: function createAxiosInstance(baseURL) {
+      return axios__WEBPACK_IMPORTED_MODULE_2___default.a.create({
+        baseURL: baseURL
+      });
+    }
+  }]);
+
+  return DataProviderInstance;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (DataProviderInstance);
+
+/***/ }),
+
+/***/ "./resources/js/domain/provider/mock/TypicodeDataProvider.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/domain/provider/mock/TypicodeDataProvider.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _DataProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../DataProvider */ "./resources/js/domain/provider/DataProvider.js");
+/* harmony import */ var _apiConstans__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../apiConstans */ "./resources/js/domain/apiConstans.js");
+
+
+
+
+
+
+
+
+var TypicodeDataProvider =
+/*#__PURE__*/
+function (_DataProvider) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(TypicodeDataProvider, _DataProvider);
+
+  function TypicodeDataProvider() {
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, TypicodeDataProvider);
+
+    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(TypicodeDataProvider).apply(this, arguments));
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(TypicodeDataProvider, [{
+    key: "getAllPosts",
+    value: function getAllPosts() {
+      return this.axios.get(_apiConstans__WEBPACK_IMPORTED_MODULE_6__["urls"].post).then(function (request) {
+        return request.data;
+      });
+    }
+  }]);
+
+  return TypicodeDataProvider;
+}(_DataProvider__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (TypicodeDataProvider);
+
+/***/ }),
+
+/***/ "./resources/js/domain/provider/mock/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/domain/provider/mock/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TypicodeDataProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TypicodeDataProvider */ "./resources/js/domain/provider/mock/TypicodeDataProvider.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (new _TypicodeDataProvider__WEBPACK_IMPORTED_MODULE_0__["default"]());
 
 /***/ }),
 
